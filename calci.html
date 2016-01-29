@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Online Calculator</title>
+	<link rel="stylesheet" type="text/css" href="calcicss.css">
+</head>
+
+<body>
+
+	<form Name="calc">
+		<script src="calc.js"></script>
+		<div class="bodystyle">
+
+			<table class="tableborder">
+				<tr>
+					<td colspan="4"><input class="inputbox" type=text
+						Name="display"></td>
+				</tr>
+				<tr>
+					<td><input class="keybutton" type=button value="0"
+						OnClick="calc.display.value+='0'"></td>
+					<td><input class="keybutton" type=button value="1"
+						OnClick="calc.display.value+='1'"></td>
+					<td><input class="keybutton" type=button value="2"
+						OnClick="calc.display.value+='2'"></td>
+					<td><input class="keybutton" type=button value="+"
+						OnClick="calc.display.value+='+'"></td>
+				</tr>
+				<tr>
+					<td><input class="keybutton" type=button value="3"
+						OnClick="calc.display.value+='3'"></td>
+					<td><input class="keybutton" type=button value="4"
+						OnClick="calc.display.value+='4'"></td>
+					<td><input class="keybutton" type=button value="5"
+						OnClick="calc.display.value+='5'"></td>
+					<td><input class="keybutton" type=button value="-"
+						OnClick="calc.display.value+='-'"></td>
+				</tr>
+				<tr>
+					<td><input class="keybutton" type=button value="6"
+						OnClick="calc.display.value+='6'"></td>
+					<td><input class="keybutton" type=button value="7"
+						OnClick="calc.display.value+='7'"></td>
+					<td><input class="keybutton" type=button value="8"
+						OnClick="calc.display.value+='8'"></td>
+					<td><input class="keybutton" type=button value="x"
+						OnClick="calc.display.value+='*'"></td>
+				</tr>
+				<tr>
+					<td><input class="keybutton" type=button value="9"
+						OnClick="calc.display.value+='9'"></td>
+					<td><input class="keybutton" type=button value="C"
+						OnClick="calc.display.value=''"></td>
+					<td><input class="keybutton" type=button value="="
+						OnClick="printBegining();calc.display.value=eval(calc.display.value);printEnd()"></td>
+					<td><input class="keybutton" type=button value="/"
+						OnClick="calc.display.value+='/'"></td>
+				</tr>
+			</table>
+		</div>
+		<div id="history">
+			<textarea class="inputbox big" Name="displayHistory"></textarea>
+		</div>
+	</form>
+</body>
